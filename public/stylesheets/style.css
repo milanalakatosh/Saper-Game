@@ -1,0 +1,272 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	display: flex;
+  justify-content: center;
+	align-items: center;
+  background-image: url(/images/background.png);
+
+}
+
+.game-container {
+	margin-top: 40px;
+	display: flex;
+  justify-content: center;
+	align-items: center;
+	flex-direction:column;
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none; 
+ 
+}
+.introduction-container {
+	display: flex;
+	align-items:stretch;
+	flex-direction: column;
+	width: 70%;
+	font-size: 19px;
+	line-height: 1.5;
+	text-align: justify;
+}
+
+.description h3,
+.rules h3 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.choose-level {
+	display: flex;
+	justify-content:space-between;
+	margin-top: 20px;
+}
+
+.choose-level div {
+	padding: 15px;
+	border: 1px solid #E4E4E4;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin: 20px;
+}
+
+.choose-level div:hover {
+	border-color: #2D1F57;
+}
+
+.choose-level div img {
+	max-width: 100%;
+	height: auto;
+}
+
+.beginner.level {
+	width: 130px;
+	height: 230px;
+}
+
+.intermediate.level {
+	width: 160px;
+	height: 230px;
+}
+
+.expert.level {
+	width: 275px;
+	height: 230px;
+
+}
+
+.level {
+	cursor: pointer;
+}
+.rules {
+	margin-top: 40px;
+}
+
+.field {
+	border: 2px solid #2A1C53;
+}
+
+.button {
+	cursor: pointer;
+	width: 34px;
+	height: 34px;
+	background-color: #C7C4D9;
+	border: 1px solid gray;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0%;
+}
+.head {
+	margin-top: 50px;
+	height: 65px;
+	display: flex;
+	align-self:stretch;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #7B7895;
+	border: 2px;
+	border-bottom: 0px;
+	border-color: #2A1C53;
+	border-style: solid;
+}
+
+.mine-counter,
+.time-counter {
+	height: 35px;
+	width: 60px;
+	border: 2px solid black;
+	background-color: #232323;
+	position: relative;
+	top: 7px;
+	color: red;
+	font-size: 35px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border: 1px solid #2E2558;
+}
+
+.icon {
+	width: 38px;
+	height: 35px;
+	position: relative;
+	top: 7px;
+	cursor: pointer;
+}
+.button.flag {
+	font-size: 15px;
+}
+
+.mined {
+	font-size: 0%;
+}
+
+.mined.opened {
+	font-size: 18px;
+}
+
+.mined::before {
+	content: '💣';
+}
+
+.flag::before {
+	content: "🚩";
+}
+
+.visible {
+	display: inline-block;
+}
+
+.opened {
+	background-color: #F8EDEA;
+}
+
+.field>* {
+	display: flex;
+}
+
+.number {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-weight: 900;
+	font-size: 0px;
+}
+
+.number.opened {
+	font-size: 20px;
+}
+
+.number.nr-1 {
+	color: blue;
+}
+
+.number.nr-1::before {
+	content: "1";
+}
+
+.number.nr-2 {
+	color: green;
+}
+
+.number.nr-2::before {
+	content: "2";
+}
+
+.number.nr-3 {
+	color: red;
+}
+
+.number.nr-3::before {
+	content: "3";
+}
+
+.number.nr-4 {
+	color: #000A7B;
+}
+
+.number.nr-4::before {
+	content: "4";
+}
+
+.number.nr-5 {
+	color: #75140C;
+}
+
+.number.nr-5::before {
+	content: "5";
+}
+
+.number.nr-6 {
+	color: #36837D;
+}
+
+.number.nr-6::before {
+	content: "6";
+}
+
+.number.nr-7 {
+	color: #030303;
+}
+
+.number.nr-7::before {
+	content: "7";
+}
+
+.number.nr-8 {
+	color: hotpink;
+}
+
+.number.nr-8::before {
+	content: "8";
+}
+
+.number.flag::before {
+	content: ' 🚩';
+}
+
+.shake {
+	animation-duration: 0.5s;
+	animation-name: shake;
+}
+
+@keyframes shake {
+	0%,
+	100% {
+			transform: translateX(0);
+	}
+	10%,
+	50%,
+	90% {
+			transform: translateX(-5px);
+	}
+	30%,
+	70%,
+	80% {
+			transform: translateX(5px);
+	}
+}
+.expert.level img {
+	height: 170px;
+}
+
